@@ -1,0 +1,16 @@
+XAuthLocation /usr/bin/xauth
+
+ForwardX11 yes
+
+AddKeysToAgent yes
+
+# If you want to forward SSH Agent to every connection, set it at the top
+ForwardAgent yes
+
+# If you prefer to choose each host:
+Host example
+    ForwardAgent yes
+
+# Alternatively, if you allow it globally but want to deny it to some hosts:
+Host example-deny
+    ForwardAgent no

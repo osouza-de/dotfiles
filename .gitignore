@@ -1,0 +1,18 @@
+# Block all private key extensions
+*.key
+*.pem
+*.priv
+id_rsa
+id_ed25519
+
+# Block any local resolved environment files
+.env
+.env_local
+*.local
+secrets.sh
+
+# System noise
+.DS_Store
+.vscode/
+.idea/
+*.swp

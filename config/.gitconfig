@@ -1,0 +1,16 @@
+[core]
+        autocrlf = false
+        filemode = false
+        editor = vim
+[user]
+        email = d4nd.br0s@gmail.com
+        name = Anderson de Souza
+        signingkey = {GPG_KEY_ID}
+[commit]
+        gpgsign = true
+[gpg]
+        program = gpg2
+[tag]
+        gpgsign = true
+[pull]
+        rebase = false
