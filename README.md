@@ -1,5 +1,11 @@
 # osouza.de dotfiles
 
+## Requirements
+```
+curl git
+```
+
+If using a [Alpine Linux](https://it.osouza.de/docs/ops/docker/snippets#alpine)
 
 ## Installation
 ```

@@ -2,7 +2,7 @@
 echo "Starting dotfiles setup..."
 
 # Your Git repository URL
-REPO_URL="https://github.com"
+REPO_URL="https://github.com/osouza-de/dotfiles.git"
 DOTFILES_DIR="$HOME/dotfiles"
 
 # 1. Detect execution via curl (pipe) vs local git repo clone
