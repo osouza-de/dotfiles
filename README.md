@@ -11,5 +11,5 @@ chmod +x install.sh
 
 ## One-line install
 ```
-curl -fsSL https://raw.githubusercontent.com/osouza-de/dotfiles/refs/heads/master/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/osouza-de/dotfiles/refs/heads/master/install.sh | sed 's/\r$//' | sh
 ```
