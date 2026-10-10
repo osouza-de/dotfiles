@@ -9,19 +9,22 @@ DOTFILES_DIR="$HOME/dotfiles"
 if [ ! -d "./pubkeys" ] || [ ! -d ".git" ]; then
     echo "🌐 Execution via curl detected. Preparing local environment..."
 
-    # Check and install git if missing
+    # Check if git is installed, suggest command if missing
     if ! command -v git >/dev/null 2>&1; then
-        echo "📦 Git not found. Installing..."
+        echo "❌ Error: git is not installed on this system."
+        echo "Please install git using your package manager and rerun the script:"
+        
+        # Check system binaries to suggest the perfect command
         if command -v pkg >/dev/null 2>&1; then
-            pkg update && pkg install git -y          # Termux / Android
+            echo "   👉 Run: pkg update && pkg install git -y"
         elif command -v apt-get >/dev/null 2>&1; then
-            sudo apt-get update && sudo apt-get install git -y  # Kali / Debian
+            echo "   👉 Run: sudo apt-get update && sudo apt-get install git -y"
         elif command -v pacman >/dev/null 2>&1; then
-            sudo pacman -Syu git --noconfirm          # Arch Linux
+            echo "   👉 Run: sudo pacman -Syu git"
         else
-            echo "❌ Package manager not recognized. Install git manually."
-            exit 1
+            echo "   👉 Run your system's equivalent of: install git"
         fi
+        exit 1
     fi
 
     # Clone the repository if the target directory doesn't exist
